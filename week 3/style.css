@@ -1,0 +1,39 @@
+h1 {
+  color: brown;
+}
+h3 {
+  color: darkslategrey;
+}
+h2 {
+  color: palevioletred;
+}
+#venue {
+  color: blueviolet;
+}
+section {
+  text-align: center;
+  border: 5px solid lavender;
+}
+
+body {
+  margin-left: 30px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  background-color: rgb(0, 8, 42);
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+ul {
+  list-style: none;
+  margin-left: 30px;
+}
