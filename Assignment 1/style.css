@@ -1,0 +1,224 @@
+body {
+  background-color: rgb(24, 17, 4);
+}
+
+.title-box {
+  width: 350px;
+  height: 150px;
+  margin: auto;
+  /* used margin auto to center the titles horizontally*/
+  margin-bottom: 40px;
+  /* creating space between the subtitle and the image below */
+  text-align: center;
+}
+
+.top {
+  font-family: "Boldonse", system-ui;
+  /* I used this bold font to match the look of the original website */
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: rgb(255, 172, 70);
+  /* matching the color scheme of the original website */
+}
+
+.bottom {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 4px;
+  /* wanted to make it as wide as the first half of the title above to make it look cleaner*/
+  margin-top: -2.5rem;
+  /* to bring it closer to the text above it */
+  color: rgb(255, 172, 70);
+}
+.name {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: -25px;
+  letter-spacing: 11px;
+  /* making it as wide as the main title for a clean look*/
+  color: rgb(255, 227, 193);
+}
+.title-box h2 {
+  margin-top: -20px;
+  /* minimizing the space between the subtitle and the title */
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: small;
+  text-align: center;
+  letter-spacing: 1px;
+  color: rgba(255, 162, 31, 0.545);
+  /* centering the sub title to align with the title */
+}
+.landing-page {
+  display: block;
+  /* to allow horizontal centering */
+  margin: auto;
+  /* for horizontal centering */
+}
+.other-chapters {
+  display: flex;
+  /* for images to stay side by side in a row */
+  justify-content: center;
+  /* since i used a flexbox, i used justify-content to center it */
+  gap: 20px;
+  /* to improve visual hierarchy by giving breathing room between images */
+}
+
+.attention-grab h1 {
+  font-family: "Boldonse", system-ui;
+  /* used the same font as the main title for a cohesive look */
+  font-size: medium;
+  color: rgb(255, 172, 70);
+}
+.attention-grab {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(222, 207, 188);
+
+  text-align: justify;
+  /* to make the text fit better and improve visual hierarchy*/
+
+  padding: 20px;
+  /* giving breathing room for the text */
+  border: 3px solid;
+  border-color: rgba(245, 245, 220, 0.093);
+  break-inside: avoid;
+  /* i'm using this on each item to ensure that the content of each box stays together in the same column, otherwise content was split across columns and it made it illegible and ruined the visual hierarchy. It also allowed a gallery-like layout that i'm going for */
+  margin-bottom: 20px;
+  /* creating gaps between boxes */
+}
+
+.actions h1 {
+  font-family: "Boldonse", system-ui;
+  font-size: medium;
+  color: rgb(255, 172, 70);
+}
+
+.actions {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(222, 207, 188);
+
+  text-align: justify;
+  padding: 20px;
+  border: 3px solid;
+  border-color: rgba(245, 245, 220, 0.093);
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+.primary-goal h1 {
+  font-family: "Boldonse", system-ui;
+  font-size: medium;
+  color: rgb(255, 172, 70);
+}
+.primary-goal {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(222, 207, 188);
+
+  text-align: justify;
+  padding: 20px;
+  border: 3px solid;
+  border-color: rgba(245, 245, 220, 0.093);
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+.interaction h1 {
+  font-family: "Boldonse", system-ui;
+  font-size: medium;
+  color: rgb(255, 172, 70);
+}
+.interaction {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(222, 207, 188);
+
+  text-align: justify;
+  padding: 20px;
+  border: 3px solid;
+  border-color: rgba(245, 245, 220, 0.093);
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+.media h1 {
+  font-family: "Boldonse", system-ui;
+  font-size: medium;
+  color: rgb(255, 172, 70);
+}
+.media {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(222, 207, 188);
+
+  text-align: justify;
+  padding: 20px;
+  border: 3px solid;
+  border-color: rgba(245, 245, 220, 0.093);
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+.frustrations h1 {
+  font-family: "Boldonse", system-ui;
+  font-size: medium;
+  color: rgb(255, 172, 70);
+}
+.frustrations {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(222, 207, 188);
+
+  text-align: justify;
+  padding: 20px;
+  border: 3px solid;
+  border-color: rgba(245, 245, 220, 0.093);
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+.satisfactions h1 {
+  font-family: "Boldonse", system-ui;
+  font-size: medium;
+  color: rgb(255, 172, 70);
+}
+.satisfactions {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: rgb(222, 207, 188);
+
+  text-align: justify;
+  padding: 20px;
+  border: 3px solid;
+  border-color: rgba(245, 245, 220, 0.093);
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+.container {
+  margin: 100px;
+  /* adding space around the whole container for a cleaner layout */
+  column-count: 3;
+  /* i wanted to create a dynamic gallery-style layout */
+  column-gap: 20px;
+  /* same space and the bottom margin on each item to have a breathable and clean visual hierarchy */
+}
+.audio-player {
+  text-align: center;
+  margin: 20px;
+}
+audio {
+  border: 6px solid rgba(166, 130, 89, 0.544);
+  /* created a border with the same color as the text boxes */
+  border-radius: 33px;
+  /* tried my best to make the radius match the curve of the mp3 player so that it looks like a fitted border */
+}
