@@ -1,188 +1,30 @@
-/* :root {
-  --primary-bg-color: #f4f4f4;
-  --text-color: #333;
-  --main-bg-color: #333;
-  --main-text-color: #fff;
-  --main-btn-bg-color: #938989;
+.navbar {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+/* nav {
+    width: 718px;
+    height: 48px;
+    margin-top: 20px;
+    text-align: center; 
 } */
-
-/* body,
-h1,
-p,
-ul {
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 220px;
+  list-style: none;
   margin: 0;
   padding: 0;
-} */
-
-body {
-  background-color: #010101;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Add additional styles as needed */
-
-/* Create a container for the main content */
-.container {
-  max-width: 1000px;
-  width: 100%;
-  padding: 10px;
-}
-
-/* Header styling */
-.title {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.Reverie {
-  color: #d0d9d6;
-  text-align: center;
-  font-family: "Arapey", serif;
-  font-size: 170px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 75px;
-  letter-spacing: -17px;
-}
-
-/* Navigation styling */
-nav {
-  width: 718px;
-  height: 48px;
-  /* margin-top: 20px;*/
-  text-align: center;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-.home {
-  width: fixed 100px;
-  height: fixed 48px;
-  top: 100px;
-  left: 394px;
-  color: #d0d9d6;
-  text-align: center;
-  font-family: "Asta Sans";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: -4px;
-}
-
-.music {
-  width: fixed 78px;
-  height: fixed 38px;
-  top: 105px;
-  left: 717px;
-  color: rgba(288, 217, 214, 0.75);
-  font-family: "Asta Sans";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: -3.2px;
-}
-.library {
-  width: fixed 87px;
-  height: fixed 38px;
-  top: 105px;
-  left: 1025px;
-  color: rgba(288, 217, 214, 0.75);
-  font-family: "Asta Sans";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: -3.2px;
-}
-
-nav ul li {
-  margin-right: 223px;
 }
 
 nav a {
   text-decoration: none;
-}
-
-/* Media player styling */
-.vinyl {
-  width: 807px;
-  height: 807px;
-  aspect-ratio: 1/1;
-  border-radius: 807px;
-  border: 300px solid rgba(193, 5, 12, 0.8);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-}
-.vinyl {
-  width: 727px;
-  height: 727px;
-  aspect-ratio: 1/1;
-  width: 727px;
-  height: 727px;
-  aspect-ratio: 1/1;
-}
-.media-player {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.media-player video {
-  max-width: 100%;
-}
-
-.custom-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.custom-controls button {
-  background-color: var(--main-btn-bg-color);
-  color: var(--main-text-color);
-  border: none;
-  padding: 8px 12px;
+  font-family: "Asta Sans";
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -3px;
+  display: inline-block;
   cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #ddd;
-  margin-top: 10px;
-  overflow: hidden;
-}
-
-.progress-bar span {
-  display: block;
-  height: 100%;
-  background-color: var(--main-bg-color);
-  width: 0;
-  transition: width 0.3s ease;
-}
-
-/* Footer styling */
-footer {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
 }
