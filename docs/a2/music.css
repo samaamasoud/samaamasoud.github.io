@@ -1,51 +1,353 @@
 body {
-  background-color: #0b4f55;
-  line-height: 1.6;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
+  background: 
+  /* i used layered gradients to create a more immersive and fluid background */
+    radial-gradient(circle at 20% 20%, #921a1a, transparent 40%),
+    radial-gradient(circle at 80% 30%, #520305, transparent 40%),
+    radial-gradient(circle at 50% 80%, #ce484c, transparent 45%),
+    radial-gradient(circle at 50% 80%, #820307, transparent 45%),
+    linear-gradient(135deg, #c1050c, #520305, #750408);
+  /* added different shades of red instead of one shade of bright red to create an immersive experience */
+  background-size: 200% 200%;
+  /* made the background bigger so that it allows the gradient to shift over time for smoother movement */
+  animation: swirlMove 20s ease-in-out infinite;
+  /* used slow animation to make an ambient motion  */
+}
+
+@keyframes swirlMove {
+  /* to control how the gradient moves */
+  0% {
+    background-position: 0% 50%;
+    /* starting position, starts moving from the left side cetered vertically */
+  }
+  50% {
+    background-position: 100% 50%;
+    /* midpoint, gradient shifts fully to the right creating the drifting effect */
+  }
+  100% {
+    background-position: 0% 50%;
+    /* in the end position it return to the starting point to create a seamless loop */
+  }
 }
 header {
-  height: 100px;
+  margin-right: 700px;
   color: #d0d9d6;
-  height: 50px;
-  text-align: center;
   font-family: Arapey;
   font-size: 70px;
   font-style: italic;
   font-weight: 400;
   line-height: 75px;
   letter-spacing: -7px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-music {
+  padding: 20px;
+  padding-left: 50px;
+  justify-content: center;
+  margin-right: 700px;
+}
+
+.navbar-music ul {
+  display: flex;
+  justify-content: space-between;
+  /* for even gaps between tabs */
+  align-items: center;
+  /* so that it's centered vertically */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  /* to remove the underlines */
+  font-family: "Asta Sans";
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -3px;
+  display: inline-block;
+  /* to maintain horizontal alignment */
+  cursor: pointer;
 }
 
 .music a {
-  /* width: fixed 100px;
-    height: fixed 48px;
-    top: 100px;
-    left: 394px;
-    font-family: "Asta Sans"; 
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    letter-spacing: -4px; */
-  color: #d0d9d6;
+  color: #210001;
   font-size: 40px;
 }
 
 .home a,
 .library a {
-  /* width: fixed 78px;
-    height: fixed 38px;
-    top: 105px;
-    left: 717px;
-    justify-content: center;
-    font-family: "Asta Sans";
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    letter-spacing: -3.2px; */
+  color: rgba(36, 0, 1, 0.75);
+  font-size: 32px;
+}
+
+.vinyl-container {
+  position: absolute;
+  right: -140px;
+  top: -200px;
+  display: flex;
+  width: 800;
+  margin-left: auto;
+}
+#lyrics-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Asta Sans";
+  font-weight: 500;
   color: rgba(208, 217, 214, 0.75);
 
+  font-size: 28px;
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.vinyl-song {
+  position: absolute;
+  bottom: 94px;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.vinyl-album {
+  max-width: 807px;
+  animation: vinyl-spin 8s linear infinite;
+  animation-play-state: paused;
+}
+
+.vinyl-album.play {
+  animation-play-state: running;
+}
+
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.song-name {
+  color: #d0d9d6;
+  text-align: center;
+  font-family: Arapey;
+  font-size: 96px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 75%; /* 72px */
+  letter-spacing: -9.6px;
+}
+
+.artist-name-vinyl {
+  color: #d0d9d6;
+  font-family: "Asta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -2.4px;
+  width: fit-content;
+  align-self: center;
+}
+
+#album-container {
+  margin-right: 700px;
+  padding: 70px;
+}
+
+.albumname {
+  color: #d0d9d6;
+  text-align: left;
+  font-family: Arapey;
+  font-size: 128px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 75px;
+  letter-spacing: -12.8px;
+}
+
+.artistname {
+  color: #d0d9d6;
+  font-family: "Asta Sans";
   font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -3.2px;
+}
+
+#tracklist {
+  margin-right: 700px;
+  padding-left: 70px;
+  justify-content: start;
+  align-items: start;
+}
+
+.tracklist {
+  color: #300002;
+  font-family: "Asta Sans";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -6.4px;
+}
+
+.list {
+  color: #300002;
+  font-family: Arapey;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -4px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.list.active {
+  color: #d0d9d6;
+}
+
+.audio-track-container {
+  justify-content: center;
+  background: #d0d9d6;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 45px;
+  width: 93%;
+  height: 5px;
+}
+
+.progress {
+  background-color: #300002;
+  width: 0%;
+  height: 5px;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+#progress-bar {
+  -webkit-appearance: none;
+  /* display: block; */
+  /* to make the range input act as a block element rather than an inline element so that it has its own row in the layout */
+  margin: 50px;
+  /* i applied a margin auto to center the element horisontally within the parent container by distributing equal space on all sides */
+  width: 93%;
+  /* to give breathing space on both sides */
+  height: 3px;
+  background-color: #d0d9d6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #082f41;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+}
+
+.timestamp-controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  height: 70px;
+}
+
+/* #timestamp {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* margin: 30px; 
+  padding: 30px;
+} */
+
+#current-con {
+  justify-self: flex-start;
+}
+
+#current {
+  width: fit-content;
+  color: #fff;
+
+  font-family: "Anonymous Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  margin-left: 50px;
+}
+
+#duration-con {
+  justify-self: flex-end;
+}
+
+#duration {
+  width: fit-content;
+  color: #fff;
+  justify-content: flex-end;
+  display: inline;
+  font-family: "Anonymous Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  margin-right: 50px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 200px;
+}
+#play-pause-button {
+  background: none;
+  border: none;
+  justify-content: center;
+  bottom: 15px;
+  cursor: pointer;
+
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+
+#previous-button {
+  background: none;
+  border: none;
+  justify-content: start;
+  cursor: pointer;
+
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+
+#next-button {
+  background: none;
+  border: none;
+  justify-content: end;
+  cursor: pointer;
+
+  /* left: 50%;
+  transform: translateX(-50%); */
 }

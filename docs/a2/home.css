@@ -48,6 +48,33 @@ height: 50px;
 
 /* Navigation styling */
 
+.navbar-home {
+  width: 100%;
+  padding: 40px;
+  justify-content: center;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.navbar-home ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Asta Sans";
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -3px;
+  display: flex;
+  cursor: pointer;
+}
+
 .home a {
   /* width: fixed 100px;
   height: fixed 48px;
@@ -75,19 +102,18 @@ height: 50px;
   line-height: normal;
   letter-spacing: -3.2px; */
   color: rgba(208, 217, 214, 0.75);
-
   font-size: 32px;
 }
 
 /* Media player styling */
 .title {
-  height: 100vh;
+  height: 100px;
   display: flex;
   flex-direction: column;
   /* so the slogan is right under the title */
   justify-content: center;
   align-items: center;
-  position: absolute;
+  margin-top: 10%;
 }
 .Reverie {
   color: #d0d9d6;
@@ -107,6 +133,7 @@ height: 50px;
   text-align: center;
   margin-top: 20px;
 }
+
 .listenbtn {
   display: flex;
   justify-content: center;
@@ -122,8 +149,7 @@ height: 50px;
   font-weight: 800;
   font-size: 32px;
   letter-spacing: -3.2px;
-  position: absolute;
-  top: 60%;
+  text-decoration: none;
 }
 .vinyl {
   width: 807px;
