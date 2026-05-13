@@ -15,12 +15,12 @@ ul {
 } */
 
 body {
+  overflow-y: scroll;
   background-color: #010101;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* Add additional styles as needed */
@@ -142,6 +142,7 @@ nav a {
   align-items: center;
   width: 208px;
   height: 54px;
+  margin: 30px;
   padding: 8px 35px;
   border: none;
   outline: none;
@@ -212,10 +213,12 @@ nav a {
   width: 100%;
 }
 footer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Asta Sans";
   flex-wrap: wrap;
-  padding: 30px;
+  padding: 100px;
+  margin-top: 400px;
 }
