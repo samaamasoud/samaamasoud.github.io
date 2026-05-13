@@ -7,7 +7,7 @@ body {
   /* i used layered gradients to create a more immersive and fluid background */
     radial-gradient(circle at 20% 20%, #921a1a, transparent 40%),
     radial-gradient(circle at 80% 30%, #520305, transparent 40%),
-    radial-gradient(circle at 50% 80%, #ce484c, transparent 45%),
+    radial-gradient(circle at 50% 80%, #c85f63, transparent 25%),
     radial-gradient(circle at 50% 80%, #820307, transparent 45%),
     linear-gradient(135deg, #c1050c, #520305, #750408);
   /* added different shades of red instead of one shade of bright red to create an immersive experience */
@@ -198,6 +198,7 @@ nav a {
 }
 
 .tracklist {
+  mix-blend-mode: darken;
   color: #300002;
   font-family: "Asta Sans";
   font-size: 64px;
