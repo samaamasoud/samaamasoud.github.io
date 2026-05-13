@@ -1,7 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-bottom: 100px;
   background: 
   /* i used layered gradients to create a more immersive and fluid background */
     radial-gradient(circle at 20% 20%, #921a1a, transparent 40%),
@@ -223,7 +224,7 @@ nav a {
 
 .audio-track-container {
   justify-content: center;
-  background: #d0d9d6;
+  background: #300002;
   border-radius: 5px;
   cursor: pointer;
   margin: auto;
@@ -233,7 +234,7 @@ nav a {
 }
 
 .progress {
-  background-color: #300002;
+  background-color: #d0d9d6;
   width: 0%;
   height: 5px;
   border-radius: 4px;
@@ -350,4 +351,12 @@ nav a {
 
   /* left: 50%;
   transform: translateX(-50%); */
+}
+
+footer {
+  position: relative;
+  width: 100%;
+
+  background-color: #210001;
+  height: 100px;
 }

@@ -135,6 +135,7 @@ nav a {
 }
 
 .listenbtn {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,6 +150,13 @@ nav a {
   font-weight: 800;
   font-size: 32px;
   letter-spacing: -3.2px;
+}
+
+.listenbtn,
+.listenbtn:visited,
+.listenbtn:hover,
+.listenbtn:active {
+  color: white;
   text-decoration: none;
 }
 .vinyl {
@@ -207,4 +215,6 @@ footer {
   justify-content: center;
   align-items: center;
   font-family: "Asta Sans";
+  flex-wrap: wrap;
+  padding: 30px;
 }
