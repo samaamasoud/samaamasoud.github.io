@@ -1,8 +1,14 @@
+.page {
+  position: relative;
+}
+html,
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  padding-bottom: 100px;
+  max-width: 100%;
   background: 
   /* i used layered gradients to create a more immersive and fluid background */
     radial-gradient(circle at 20% 20%, #921a1a, transparent 40%),
@@ -16,7 +22,10 @@ body {
   animation: swirlMove 20s ease-in-out infinite;
   /* used slow animation to make an ambient motion  */
 }
-
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
 @keyframes swirlMove {
   /* to control how the gradient moves */
   0% {

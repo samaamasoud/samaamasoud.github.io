@@ -21,93 +21,94 @@
     <script src="music.js" defer></script>
   </head>
   <body>
-    <!-- Header and nav bar -->
-    <header>
-      <h1 class="title">Reverie</h1>
-    </header>
-    <nav class="navbar-music">
-      <ul>
-        <li class="home"><a href="index.html">Home</a></li>
-        <li class="music"><a href="music.html">Music</a></li>
-        <li class="library"><a href="library.html">Library</a></li>
-      </ul>
-    </nav>
+    <div class="page">
+      <!-- Header and nav bar -->
+      <header>
+        <h1 class="title">Reverie</h1>
+      </header>
+      <nav class="navbar-music">
+        <ul>
+          <li class="home"><a href="index.html">Home</a></li>
+          <li class="music"><a href="music.html">Music</a></li>
+          <li class="library"><a href="library.html">Library</a></li>
+        </ul>
+      </nav>
 
-    <!-- main content -->
-    <div class="vinyl-container">
-      <img class="vinyl-album" src="vinyl-album.png" alt="vinyl" />
-      <div id="lyrics-overlay"></div>
-      <div class="vinyl-song">
-        <h1 class="song-name">Iris</h1>
-        <h3 class="artist-name-vinyl">Sama</h3>
-      </div>
-    </div>
-    <!-- made a container for the vinyl and the song details because i want them on the vinyl -->
-    <div id="album-container">
-      <h1 class="albumname">Bittersweet</h1>
-      <h3 class="artistname">Sama</h3>
-    </div>
-    <div id="tracklist">
-      <h1 class="tracklist">Tracklist</h1>
-      <p class="list" data-src="Track1.mp3" data-name="Iris">1 . Iris</p>
-      <p class="list" data-src="Track2.mp3" data-name="After Hours">
-        2 . After Hours
-      </p>
-      <p class="list" data-src="Track3.mp3" data-name="Bittersweet">
-        3 . Bittersweet
-      </p>
-      <p class="list" data-src="Track4.mp3" data-name="Twilight">
-        4 . Twilight
-      </p>
-    </div>
-    <!-- added a data name so that the song name that appears if just the name without the numbers in the list -->
-
-    <div class="audio-track-container">
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <!-- to be able to customize the progress bar  -->
-      <div class="timestamp-controls">
-        <!-- made on container for both the timestamps and controls because i want them all aligned -->
-        <div id="current-con">
-          <span id="current">0:00</span>
-        </div>
-        <div class="controls">
-          <button id="previous-button">
-            <img
-              id="previous-img"
-              src="previous.png"
-              alt="Previous Button"
-              width="34px"
-              height="23px"
-            />
-          </button>
-          <button id="play-pause-button">
-            <img
-              id="play-pause-img"
-              src="play-icon.png"
-              alt="Play Button"
-              width="67px"
-              height="67px"
-            />
-          </button>
-          <button id="next-button">
-            <img
-              id="next-img"
-              src="next.png"
-              alt="Next Button"
-              width="34px"
-              height="23px"
-            />
-          </button>
-        </div>
-        <div id="duration-con">
-          <span id="duration">0:00</span>
+      <!-- main content -->
+      <div class="vinyl-container">
+        <img class="vinyl-album" src="vinyl-album.png" alt="vinyl" />
+        <div id="lyrics-overlay"></div>
+        <div class="vinyl-song">
+          <h1 class="song-name">Iris</h1>
+          <h3 class="artist-name-vinyl">Sama</h3>
         </div>
       </div>
-    </div>
+      <!-- made a container for the vinyl and the song details because i want them on the vinyl -->
+      <div id="album-container">
+        <h1 class="albumname">Bittersweet</h1>
+        <h3 class="artistname">Sama</h3>
+      </div>
+      <div id="tracklist">
+        <h1 class="tracklist">Tracklist</h1>
+        <p class="list" data-src="Track1.mp3" data-name="Iris">1 . Iris</p>
+        <p class="list" data-src="Track2.mp3" data-name="After Hours">
+          2 . After Hours
+        </p>
+        <p class="list" data-src="Track3.mp3" data-name="Bittersweet">
+          3 . Bittersweet
+        </p>
+        <p class="list" data-src="Track4.mp3" data-name="Twilight">
+          4 . Twilight
+        </p>
+      </div>
+      <!-- added a data name so that the song name that appears if just the name without the numbers in the list -->
 
-    <audio class="audio-track"></audio>
-    <!-- so that there is actual audio but i will make it invisible -->
+      <div class="audio-track-container">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <!-- to be able to customize the progress bar  -->
+        <div class="timestamp-controls">
+          <!-- made on container for both the timestamps and controls because i want them all aligned -->
+          <div id="current-con">
+            <span id="current">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="previous-button">
+              <img
+                id="previous-img"
+                src="previous.png"
+                alt="Previous Button"
+                width="34px"
+                height="23px"
+              />
+            </button>
+            <button id="play-pause-button">
+              <img
+                id="play-pause-img"
+                src="play-icon.png"
+                alt="Play Button"
+                width="67px"
+                height="67px"
+              />
+            </button>
+            <button id="next-button">
+              <img
+                id="next-img"
+                src="next.png"
+                alt="Next Button"
+                width="34px"
+                height="23px"
+              />
+            </button>
+          </div>
+          <div id="duration-con">
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-track"></audio>
+      <!-- so that there is actual audio but i will make it invisible -->
+    </div>
   </body>
 </html>
