@@ -6,16 +6,17 @@
   --main-btn-bg-color: #938989;
 }
 
-/* body,
+body,
 h1,
 p,
 ul {
   margin: 0;
   padding: 0;
-} */
+}
 
 body {
   overflow-y: scroll;
+  /* allowing vertical scrolling on the page */
   background-color: #010101;
   line-height: 1.6;
   display: flex;
@@ -23,28 +24,11 @@ body {
   align-items: center;
 }
 
-/* Add additional styles as needed */
-
-/* Create a container for the main content */
 .container {
   max-width: 1000px;
   width: 100%;
   padding: px;
 }
-
-/* Header styling */
-/* header {
-    color: #d0d9d6;
-height: 50px;
-    text-align: center;
-    font-family: Arapey;
-    font-size: 40px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 75px;
-    letter-spacing: -3px;
-
-} */
 
 /* Navigation styling */
 
@@ -52,18 +36,24 @@ height: 50px;
   width: 100%;
   padding: 40px;
   justify-content: center;
+  /* positions nav bar in the horizontal center of the layout */
   padding-left: 250px;
   padding-right: 250px;
+  /* pushing tabs closer to each other */
 }
 
 .navbar-home ul {
   display: flex;
   justify-content: space-between;
+  /* for even gaps between tabs */
   align-items: center;
+  /* so that it's centered vertically */
   list-style: none;
+  /* for a horizontal navigation layout */
   margin: 40px;
   padding-left: 100px;
   padding-right: 100px;
+  /* pushing tabs closer to each other */
 }
 
 nav a {
@@ -73,35 +63,17 @@ nav a {
   line-height: normal;
   letter-spacing: -3px;
   display: flex;
+  /* distributing elements evenly */
   cursor: pointer;
 }
 
 .home a {
-  /* width: fixed 100px;
-  height: fixed 48px;
-  top: 100px;
-  left: 394px;
-  font-family: "Asta Sans"; 
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: -4px; */
   color: #d0d9d6;
   font-size: 40px;
 }
 
 .music a,
 .library a {
-  /* width: fixed 78px;
-  height: fixed 38px;
-  top: 105px;
-  left: 717px;
-  justify-content: center;
-  font-family: "Asta Sans";
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: -3.2px; */
   color: rgba(208, 217, 214, 0.75);
   font-size: 32px;
 }
@@ -117,6 +89,7 @@ nav a {
   margin-top: 10%;
 }
 .Reverie {
+  /* main website title styling */
   color: #d0d9d6;
   font-family: "Arapey", serif;
   font-size: 170px;
@@ -127,6 +100,7 @@ nav a {
 }
 
 .slogan {
+  /* subtitle under main title */
   color: #d0d9d6;
   font-family: "Asta Sans";
   font-weight: 800;
@@ -136,6 +110,7 @@ nav a {
 }
 
 .listenbtn {
+  /* main call-to-action button */
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -152,16 +127,20 @@ nav a {
   font-weight: 800;
   font-size: 32px;
   letter-spacing: -3.2px;
+  /* styled as a clickable button for navigation */
 }
 
 .listenbtn,
 .listenbtn:visited,
 .listenbtn:hover,
 .listenbtn:active {
+  /* to ensure button text stays white in all states */
   color: white;
   text-decoration: none;
 }
 .vinyl {
+  /* large decorative vinyl element */
+  /* positioned to be half cut-off for stylised layout effect */
   width: 807px;
   height: 807px;
   aspect-ratio: 1/1;
@@ -174,45 +153,8 @@ nav a {
   transform: translate(-50%, -50%);
 }
 
-/* .ring {
-    width: 727px;
-    height: 727px;
-    border-radius: 727px;
-    position: absolute;
-    border: 1px solid #300002;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-image: linear-gradient(
-        to right,
-        #300002,
-        #63C2EE,
-        #300002
-    ) 1;
-} */
-
-.ring1 {
-  width: fixed 427px;
-  height: fixed 427px;
-}
-.media-player {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.media-player video {
-  max-width: 100%;
-}
-
-.custom-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
-}
 footer {
+  /* centered layout with spacing from main content */
   width: 100%;
   display: flex;
   justify-content: center;

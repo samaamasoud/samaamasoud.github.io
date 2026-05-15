@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  /* so that the vinyl stays in the corner with a part of it cut off */
   max-width: 100%;
   background: 
   /* i used layered gradients to create a more immersive and fluid background */
@@ -55,8 +56,10 @@ header {
 }
 
 .navbar-music {
+  /* container for nav bar */
   padding: 20px;
   padding-left: 50px;
+  /* positions nav bar on the left side of the layout */
   justify-content: center;
   margin-right: 700px;
 }
@@ -68,6 +71,7 @@ header {
   align-items: center;
   /* so that it's centered vertically */
   list-style: none;
+  /* for a horizontal navigation layout */
   margin: 0;
   padding: 0;
 }
@@ -87,6 +91,7 @@ nav a {
 .music a {
   color: #210001;
   font-size: 40px;
+  /* highlight styling for active page tab */
 }
 
 .home a,
@@ -97,8 +102,10 @@ nav a {
 
 .vinyl-container {
   position: absolute;
+  /* to allow the cut-off effect */
   right: -140px;
   top: -200px;
+  /* positions the vinyl on the top right */
   display: flex;
   width: 800;
   margin-left: auto;
@@ -108,6 +115,7 @@ nav a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* centered overlay on top of the vinyl displaying synced lyrics */
 
   font-family: "Asta Sans";
   font-weight: 500;
@@ -117,15 +125,19 @@ nav a {
   text-align: center;
 
   opacity: 0;
+  /* allowing a fade-in effect */
   transition: opacity 0.25s ease;
   pointer-events: none;
+  /* making the element not clickable or interactive */
 }
 .vinyl-song {
+  /* container of song name and artist name */
   position: absolute;
   bottom: 94px;
   width: 60%;
   left: 50%;
   transform: translateX(-50%);
+  /* to make the anchor point of the element in the center of the element */
   display: flex;
   flex-direction: column;
 }
@@ -133,20 +145,25 @@ nav a {
 .vinyl-album {
   max-width: 807px;
   animation: vinyl-spin 8s linear infinite;
+  /* making the vinyl spin and loop the spins smoothly to make it look continuous */
   animation-play-state: paused;
+  /* making the default state paused */
 }
 
 .vinyl-album.play {
   animation-play-state: running;
+  /* make the animation start in the state of "play" */
 }
 
 @keyframes vinyl-spin {
+  /* declaring the "vinyl-spin" keyframe */
   from {
     transform: rotate(0deg);
   }
 
   to {
     transform: rotate(360deg);
+    /* creating a full rotation for a smooth loop */
   }
 }
 
@@ -157,7 +174,7 @@ nav a {
   font-size: 96px;
   font-style: italic;
   font-weight: 400;
-  line-height: 75%; /* 72px */
+  line-height: 75%;
   letter-spacing: -9.6px;
 }
 
@@ -171,11 +188,13 @@ nav a {
   letter-spacing: -2.4px;
   width: fit-content;
   align-self: center;
+  /* aligning the element to center of the flexbox containing it */
 }
 
 #album-container {
   margin-right: 700px;
   padding: 70px;
+  /* keeping the album and artist name to the left side of the screen */
 }
 
 .albumname {
@@ -200,14 +219,15 @@ nav a {
 }
 
 #tracklist {
-  margin-right: 700px;
   padding-left: 70px;
+  /* leaving breathing space */
   justify-content: start;
-  align-items: start;
+  /* keeping it on the left side of the screen */
 }
 
 .tracklist {
   mix-blend-mode: darken;
+  /* making the color more cohesive and improving contrast */
   color: #300002;
   font-family: "Asta Sans";
   font-size: 64px;
@@ -227,9 +247,11 @@ nav a {
   letter-spacing: -4px;
   padding-left: 30px;
   cursor: pointer;
+  /* indicating clickability */
 }
 .list.active {
   color: #d0d9d6;
+  /* highlighting current song */
 }
 
 .audio-track-container {
@@ -238,65 +260,49 @@ nav a {
   border-radius: 5px;
   cursor: pointer;
   margin: auto;
+  /* i applied a margin auto to center the element horisontally within the parent container by distributing equal space on all sides */
   margin-top: 45px;
   width: 93%;
+  /* to give breathing space on both sides */
   height: 5px;
 }
 
 .progress {
   background-color: #d0d9d6;
+  /* highlighting progress with a color higher in contrast */
   width: 0%;
   height: 5px;
   border-radius: 4px;
-  transition: width 0.1s linear;
-}
-#progress-bar {
-  -webkit-appearance: none;
-  /* display: block; */
-  /* to make the range input act as a block element rather than an inline element so that it has its own row in the layout */
-  margin: 50px;
-  /* i applied a margin auto to center the element horisontally within the parent container by distributing equal space on all sides */
-  width: 93%;
-  /* to give breathing space on both sides */
-  height: 3px;
-  background-color: #d0d9d6;
-  border-radius: 4px;
-  cursor: pointer;
+  transition: width 0.2s linear;
+  /* making the movement when skipping through the progress bar smooth instead of a jumpy movement */
 }
 
 #progress-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background-color: #082f41;
   width: 31px;
   height: 31px;
+  margin-bottom: 20px;
   border-radius: 50%;
+  /* i switched back to the default slider even tho it is not visible at all in the web page because the range input provides a stable structure as it helped keep the progress bar and controls aligned and centered, and removing it caused layout issues */
 }
-
 .timestamp-controls {
+  /* container of time stamps and controls */
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  width: 100%;
-  height: 70px;
-}
-
-/* #timestamp {
-  width: 100%;
-  display: flex;
   justify-content: space-between;
-  /* margin: 30px; 
-  padding: 30px;
-} */
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  flex-direction: row;
+  height: 70px;
+  /* removing it made some elements go slightly out of line */
+}
 
 #current-con {
-  justify-self: flex-start;
+  display: flex;
+  width: fit-content;
 }
 
 #current {
-  width: fit-content;
   color: #fff;
 
   font-family: "Anonymous Pro";
@@ -309,7 +315,8 @@ nav a {
 }
 
 #duration-con {
-  justify-self: flex-end;
+  display: flex;
+  width: fit-content;
 }
 
 #duration {
@@ -328,8 +335,11 @@ nav a {
 
 .controls {
   display: flex;
+  justify-content: center;
+
   align-items: center;
   gap: 20px;
+  flex: 0 0 auto;
   width: 200px;
 }
 #play-pause-button {
@@ -361,12 +371,4 @@ nav a {
 
   /* left: 50%;
   transform: translateX(-50%); */
-}
-
-footer {
-  position: relative;
-  width: 100%;
-
-  background-color: #210001;
-  height: 100px;
 }

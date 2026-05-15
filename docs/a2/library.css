@@ -41,31 +41,12 @@ nav a {
 }
 
 .library a {
-  /* width: fixed 100px;
-  height: fixed 48px;
-  top: 100px;
-  left: 394px;
-  font-family: "Asta Sans"; 
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: -4px; */
   color: #d0d9d6;
   font-size: 40px;
 }
 
 .music a,
 .home a {
-  /* width: fixed 78px;
-  height: fixed 38px;
-  top: 105px;
-  left: 717px;
-  justify-content: center;
-  font-family: "Asta Sans";
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: -3.2px; */
   color: rgba(208, 217, 214, 0.75);
   font-size: 32px;
 }
