@@ -31,7 +31,7 @@ highlightTrack();
 audioPlayer.src = album[currentTrack].dataset.src;
 console.log(album[0].dataset.src);
 
-// function to switch songs and update UI
+// function to change songs and update UI
 function setTrack(index) {
   currentTrack = index;
 

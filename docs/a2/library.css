@@ -43,6 +43,7 @@ nav a {
 .library a {
   color: #d0d9d6;
   font-size: 40px;
+  /* highlighting the current tab */
 }
 
 .music a,
@@ -61,6 +62,7 @@ nav a {
   width: 450px;
   height: 450px;
   padding: 40px;
+  /* making other albums smaller than the selected one */
 }
 .saved-album {
   display: flex;
@@ -68,11 +70,13 @@ nav a {
   width: 600px;
   height: 600px;
   padding: 40px;
+  /* enlarging the selected album */
 }
 
 footer {
   margin-top: 60px;
   background-color: #041b1d;
+  /* a different background color for the footer to distinguish it */
   display: flex;
   justify-content: center;
   align-items: center;
