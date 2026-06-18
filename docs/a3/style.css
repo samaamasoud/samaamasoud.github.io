@@ -1,0 +1,565 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-family: "Castoro Titling", serif;
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Castoro Titling", serif;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+}
+p {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 150;
+  text-align: center;
+  z-index: 2;
+}
+
+/* making all text with this class to rise from the botton and fade in to enhance the storytelling */
+.animated-text {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  display: block;
+}
+
+.animated-text.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #463b30;
+}
+.hero h2 {
+  position: absolute;
+  z-index: 2;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero h1 {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.glyphs-bg {
+  display: flex;
+}
+.glyphs-bg img {
+  opacity: 0.4;
+  width: 100%;
+  min-width: 0;
+}
+#pyramids {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  scale: 100%;
+  width: 100%;
+  height: 60%;
+  z-index: 1;
+}
+
+/* Used AI to help with animation CSS */
+
+.transition {
+  position: relative;
+  margin-top: -10px;
+  padding: 0px;
+}
+
+.transition p {
+  transform: translateY(40px) var(--translateX);
+  opacity: 0;
+  color: #463b30;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.transition p.reveal {
+  opacity: 1;
+  transform: translateY(0) var(--translateX);
+}
+
+.section1-story {
+  position: absolute;
+  --translateX: translateX(-50%);
+  top: 20%;
+  left: 50%;
+}
+
+.step-pyramid-section {
+  min-height: 750px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 100px 40px;
+}
+
+.section2-story {
+  flex: 1;
+  display: flex;
+  /* making the text lock in place while the user is srolling through the section */
+  position: sticky;
+  top: 100px;
+  height: 200vh;
+  max-height: calc(100vh - 100px);
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 800px;
+}
+
+.section2-story h1 {
+  color: #463b30;
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 30px;
+  transition-delay: 0s;
+}
+.section2-story h2 {
+  color: #463b30;
+  text-align: center;
+  transition-delay: 0.2s;
+}
+
+.section2-story p {
+  color: #463b30;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
+  /* this is to make the titles reveal first for a structured animation */
+  transition-delay: 0.4s;
+}
+.section2-story2 {
+  width: 100%;
+}
+.section2-story2 p {
+  position: sticky;
+  max-width: 800px;
+  text-align: left;
+}
+
+.section2-story2 p.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sticky {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 40px;
+}
+#step-pyramid-container {
+  flex-basis: 1;
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  margin-top: 80px;
+  margin-left: 10px;
+}
+
+/* locking the container in place so the the scroll feels like assembling the pyramid */
+#pyramid-container {
+  position: sticky;
+  top: 60px;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.bgimage {
+  position: relative;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 2;
+}
+/* the layers are hidden byt default ad because i wanted them to look like they are dropping into place, they are a bit verticzlly offset  */
+.step-pyramid-layer {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: auto;
+  height: auto;
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease;
+}
+
+/* making the translateY the same amount as the top offset to give it this physical drop effect */
+.step-pyramid-layer.reveal {
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+.scroll-zone {
+  height: 200vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 40px;
+}
+
+.section2-story2 {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.section2-story2 p .mid-scroll-text {
+  text-align: center;
+  max-width: 600px;
+  padding: 0 40px;
+  opacity: 0;
+  z-index: 10;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.section2-story2 p.mid-scroll-text.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bent-pyramid-section {
+  position: relative;
+  height: 400vh;
+  margin-top: -40px;
+  background-color: #1b2a30;
+  z-index: 1;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.sticky-content {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.bent-pyramid-titles {
+  margin: 15px;
+}
+
+.bent-pyramid-titles h1 {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bent-pyramid-titles h2 {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bent-pyramid-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 40px 0;
+}
+
+/* polygon clip path is for making a window mask and controlling it by changing the percentage in the javascript */
+.img-reveal {
+  width: 100%;
+  height: auto;
+  clip-path: polygon(0 100% 100%, 100% 100%, 0 100%);
+}
+.bent-pyramid-stories {
+  position: relative;
+  width: 95%;
+  max-width: 1000px;
+  height: 150px;
+}
+.story-p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(15px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.story-p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:root {
+  --scroll-progress: 0;
+}
+
+.red-pyramid-section {
+  height: 250vh;
+  background-image: url("red-bg-img.png");
+  background-size: cover;
+  color: #f5f0ea;
+  position: relative;
+  will-change: transform;
+}
+
+.red-pyramid-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red-pyramid-titles {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+
+  z-index: 1;
+  transform: translateX(
+      calc(-50% - (clamp(0, (var(--scroll-progress) - 0.2) * 2, 1) * 19vw))
+    )
+    translateY(calc(var(--scroll-progress) * -35vh));
+}
+
+.red-pyramid-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 2;
+  will-change: transform;
+}
+
+/* linking my transforms directly to the scroll-progress variable that javascript updates. 
+   using calc and clamp inside the css is a performance saver because it lets the browser handle the scaling and panning without the ui lagging. */
+.animated-pyramid {
+  width: 100vw;
+  height: auto;
+  transform-origin: bottom center;
+  margin-bottom: -120vh;
+
+  will-change: transform;
+  transform: translateY(calc(var(--scroll-progress) * -100vh))
+    translateX(calc(clamp(0, (var(--scroll-progress) - 0.5) * 2, 1) * 40vw))
+    scale(calc(1 - (clamp(0, (var(--scroll-progress) - 0.5) * 2, 1) * 0.2)));
+}
+
+.red-pyramid-stories {
+  position: absolute;
+  left: 10%;
+  width: 50%;
+  max-width: 700px;
+  z-index: 3;
+  will-change: transform, opacity;
+  opacity: calc(clamp(0, (var(--scroll-progress) - 0.6) * 2.5, 1));
+  transform: translateY(
+    calc(50px - (clamp(0, (var(--scroll-progress) - 0.6) * 2.5, 1) * 40px))
+  );
+  pointer-events: none;
+}
+
+.red-pyramid-story1 {
+  text-align: left;
+  margin: 30px;
+}
+
+.red-pyramid-story2 {
+  text-align: left;
+  margin: 30px;
+}
+
+.audio-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+
+  background: transparent;
+  border: none;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(5px);
+}
+
+.audio-toggle img {
+  width: 50px;
+  height: 50px;
+
+  object-fit: contain;
+}
+
+/* toggling */
+.audio-toggle .muted-icon {
+  display: none;
+}
+
+.audio-toggle.muted .unmuted-icon {
+  display: none;
+}
+.audio-toggle.muted .muted-icon {
+  display: block;
+}
+
+.great-pyramid-section {
+  position: relative;
+  width: 100%;
+  min-height: 200vh;
+  overflow: hidden;
+  background-image: url("night-sky.jpg");
+  background-size: cover;
+}
+
+.great-pyramid-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* using a dark overlay here to control the brightness.
+ when the transition runs, lowering the overlay opacity dims the block out, making the great pyramid illustration fade into view in a cinematic style */
+.great-pyramid-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+/* opacity: calc(0.9 - (var(--scroll-progress) * 0.9)); */
+.great-pyramid-section.reveal img {
+  opacity: 1;
+}
+
+.great-pyramid-section.reveal::before {
+  opacity: 0.2;
+}
+
+.great-pyramid-section.reveal .great-pyramid-stories {
+  opacity: 1;
+}
+
+.great-pyramid-titles {
+  position: relative;
+  /* to make the text over the dark overlay */
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  margin-top: 20%;
+  align-items: center;
+}
+
+.great-pyramid-stories {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1000px;
+  width: 90%;
+  z-index: 3;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.great-pyramid-stories p {
+  position: relative;
+  margin: 30px;
+  padding: 30px 0; /* Creates clean spacing between paragraph 1 and paragraph 2 */
+  text-align: center;
+}
+
+.site-footer {
+  width: 100%; /* forces the footer container to stretch full screen */
+  background-color: #070b0d;
+  padding: 40px 20px;
+  text-align: center; /* forces everything inside to center perfectly */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 100;
+}
