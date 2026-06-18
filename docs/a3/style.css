@@ -84,6 +84,9 @@ p {
   z-index: 1;
 }
 
+.bricks {
+  width: 100%;
+}
 /* Used AI to help with animation CSS */
 
 .transition {
