@@ -11,6 +11,9 @@ window.addEventListener("scroll", () => {
   if (!section || !image) return;
 
   // same as for the step pyramid, this prevents glitches if the user scrolls too fast but calculating the scroll progress as a decimal from 0 to 1
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight - window.innerHeight;
+  const scrollTop = window.scrollY;
   let progress = (scrollTop - sectionTop) / sectionHeight;
   progress = Math.max(0, Math.min(1, progress)); // Keep between boundaries
 
@@ -20,9 +23,6 @@ window.addEventListener("scroll", () => {
   image.style.clipPath = `polygon(0% ${maskPercentage}%, 100% ${maskPercentage}%, 100% 100%, 0% 100%)`;
 
   // this block uses page tracking to ensure the text change and the mask reveal align perfectly. since the section is about a construction error, the text changes right when the bending is visible in the image to a text explainig the context, which makes following the story easier.
-  const sectionTop = section.offsetTop;
-  const sectionHeight = section.offsetHeight - window.innerHeight;
-  const scrollTop = window.scrollY;
   if (progress < 0.5) {
     story1.classList.add("active");
     story2.classList.remove("active");
