@@ -463,6 +463,9 @@ p {
   display: block;
 }
 
+.staircase-transition {
+  width: 100%;
+}
 .great-pyramid-section {
   position: relative;
   width: 100%;
