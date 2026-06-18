@@ -127,3 +127,5 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(targetSection);
   }
 });
+
+// this prototype can be a part of a whole website just for stories from ancient Egypt, telling the stories in the same interactive, engaging style. i am personally, besides being egyptian, very fascinated by ancient egypt and have always wanted to learn more about it but it can get overwhelming so i can see a website like that being very helpful

@@ -1,15 +1,18 @@
 // Used AI to help write the JS and troubleshooting
+// context: this project is an interactive scroll-based storytelling experience about the architectural evolution of the pyramids of Egypt.
 
-// added columns of hieroglyphs that move at different speeds when scrolling to add to the immersion
+// made a parallax with columns of hieroglyphs that move at different speeds when scrolling to create a sense of depth
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY; // saving the number of pixels scrolled to use for the animation
   const columns = document.querySelectorAll(".glyphs-img");
+  // used a modern arrow function inside forEach array.
+  // i'm using this to replace the old 'for' loops which made the animation look cleaner
   columns.forEach((column) => {
     // to make it run the code for each column individually
     const speed = parseFloat(column.getAttribute("data-speed")); // applying different speeds for each column
 
     const yPos = scrollTop * speed; // determining the vertical movement by multiplying the amount of pixels scrolled by the speed
-    column.style.transform = `translate3d(0, ${yPos}px, 0)`; // this is for using GPU acceleration for a smoother animation
+    column.style.transform = `translate3d(0, ${yPos}px, 0)`; // i used this instead of a translateY to use GPU acceleration to create a smoother animation, which is crucial for my context
   });
 });
 
